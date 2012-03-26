@@ -1,3 +1,9 @@
+5.0.0 Beta
+-Fix launcher pro, go
+-Add vurrutROM_v8_final(experimental)
+-Fix video mx player.
+-Fix clock package.
+
 5.0.0 RC2-
 -Fix bug on installer.
 -Add tweaks selector.
