@@ -1,0 +1,3 @@
+#!/tmp/busybox sh
+dd if=/tmp/ics.zip of=/system/media/sanim.zip
+chmod 644 /system/media/sanim.zip

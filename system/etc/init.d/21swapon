@@ -1,0 +1,9 @@
+#!/system/bin/sh
+ 
+partition=3 #partition number of swap partition. Change if swap is not partition 3.
+swappy=128 #swappiness. larger number = more likely to swap, smaller number = less likely to swap
+ 
+swapon /dev/block/mmcblk0p$partition;
+sysctl -w vm.swappiness=$swappy;
+ 
+exit 0;

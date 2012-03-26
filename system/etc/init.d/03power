@@ -1,0 +1,15 @@
+#!/system/bin/sh
+#not yet (vurrut)
+
+echo 1000 > /sys/devices/platform/omap-hsuart.0/sleep_timeout 
+echo 1000 > /sys/devices/platform/omap-hsuart.1/sleep_timeout 
+echo 1000 > /sys/devices/platform/omap-hsuart.2/sleep_timeout 
+echo 1000 > /sys/devices/platform/omap-hsuart.3/sleep_timeout 
+
+#echo 0 > /debug/pm_debug/enable_off_mode
+#echo 0 > /debug/pm_debug/sleep_while_idle
+
+#echo disabled > /sys/devices/platform/omap-hsuart.0/power/wakeup
+#echo disabled > /sys/devices/platform/omap-hsuart.1/power/wakeup
+#echo disabled > /sys/devices/platform/omap-hsuart.2/power/wakeup
+#echo disabled > /sys/devices/platform/omap-hsuart.3/power/wakeup

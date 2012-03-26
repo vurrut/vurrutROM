@@ -1,0 +1,43 @@
+5.0.0 RC2-
+-Fix bug on installer.
+-Add tweaks selector.
+-Add storage selector.
+
+5.0.0 RC1- Initial version with aroma installer.
+-Update Gapps. 
+-Ajust tweaks.
+
+4.8 Version 
+Basic Features:
+-KPQ
+-Root
+-Removed all the applications that I could from samsung (minidiary, layar ...).
+-Remove samsung services.
+-Ext4.
+-Applications AOSP 2.3.6 apps (email, launcher, music, calendar, mms ...)
+-Additional Apps: Genie widget, car home, Adobe Flash.
+-AOSP-3D Launcher
+-toggle lock 
+-lockscreen mod
+-Extended power menu
+-Tweaks to build.prop and init.rc.
+-Internal task killer.
+-Notification by LED.(Only rom)
+-Change storage(internal-External)
+-Camera mod (thanks to sirilpta)
+-Update apps
+-Minor bugs fixed
+
+Changes in v4.8
+-Update gapps
+-Change stock apps mms,email,music,galery3D (compiled from aosp in hdpi)
+-Fix kies sync.
+-Adjustement tweaks
+
+-VurrutKER v07 (kernel included in the rom installer!)! More info below.
+-1,3 Ghz
+-BFQ(default)
+-Smartass v2(default)
+-Good battery live .
+
+See more:http://forum.xda-developers.com/showpost.php?p=21522752&postcount=1

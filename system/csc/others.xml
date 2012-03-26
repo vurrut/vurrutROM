@@ -1,0 +1,16 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<CustomerData>
+  <SettingsData>
+    <InputMethod>com.swype.android.inputmethod/.SwypeInputMethod</InputMethod>
+  </SettingsData>
+  <LatinIME>
+    <VibrateOn>on</VibrateOn>
+    <SoundOn>on</SoundOn>
+  </LatinIME>
+  <SamsungKeypad>	
+    <inputlist>en(UK);en(US);cs;de;el;es;et;fr;hu;it;ko;lt;lv;nl;pl;pt;ru;sk;tr;uk;</inputlist>	
+  </SamsungKeypad>	
+  <DefaultInputMethod>
+    <input_method>com.swype.android.inputmethod</input_method>
+  </DefaultInputMethod>
+ </CustomerData>
