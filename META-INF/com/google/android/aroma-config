@@ -425,6 +425,7 @@ menubox(
   	getvar("installtype_sub"),
   	"icons/install",
   	"type.prop",
+        getvar("typical"),getvar("typical_sub"),"icons/default",
         getvar("custom"), getvar("custom_sub"), "icons/customize",
   	getvar("lite"),getvar("lite_sub"),"icons/customize"
 );
