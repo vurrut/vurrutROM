@@ -94,6 +94,7 @@ setvar("systemmods_sub","Elija uno de los mods siguientes para instalar");
 	setvar("ics_sub","Tema creado por tourang que imita la ui ICS");
 	setvar("jooode_sub","Fantastico tema creado por jooode para la vurrutROM");
 	setvar("meizu_sub","Tema meizu creado por tourang");
+        setvar("miui_sub","Tema MIUI creado por tourang");
 
 setvar("mods","Modificaciones");
 	setvar("mods_sub","Elija una de las modificaciones que figuran a continuacion");
@@ -130,7 +131,7 @@ setvar("customapps","Aplicaciones adicionales");
 setvar("additionalapps","Aplicaciones adicionales");
 	setvar("adaway_sub","Adaway permite el bloqueo de la publicidad a traves del archivo Hosts");
         setvar("titanium_sub","Guardado y restauracion de apps");
-        setvar("mx_sub","Reproductor Mx video app + codecs armv7");
+        setvar("mobo_sub","Reproductor Mobo video app ");
         setvar("gapps_sub","Extra gapps (Genie widget,Car home, google translate, g++, street");
 
 setvar("bootup","Animacion de inicio");
@@ -210,14 +211,13 @@ else
         setvar("aosp_sub","Aosp gingerbread Launcher ");
         setvar("launcherPRO_sub"," LauncherPRO ");
 	setvar("golauncher_sub"," Go Launcher EX ");
-	setvar("jooode_sub","Fantasico tema de jooode para la vurrutROM");
-	setvar("ics_sub","Tema que imita el interface de ics.realizado por tourangg");
 	setvar("nosystemmod","Tema que viene de fabrica");
 	setvar("nosystemmod_sub","Enabled cambia la interfaz de usuario por defecto ");
-	setvar("ics_sub","Tema creado por tourang que imita la ui ICS");
-	setvar("jooode_sub","Fantastico tema creado por jooode para la vurrutROM");
-	setvar("meizu_sub","Tema meizu by tourang");
-        setvar("light_sub","Tema de la vurrutROM light");
+	setvar("ics_sub","Theme imitating the interface of ics. by tourangg");
+	setvar("jooode_sub","Fantastic theme created by jooode for vurrutROM");
+	setvar("meizu_sub","Theme meizu by tourang");
+        setvar("light_sub","Theme  vurrutROM light");
+        setvar("miui_sub","Theme MIUI by tourang");
 	
 setvar("mods","Mods");
 	setvar("mods_sub","Choose the modifications you want");
@@ -227,9 +227,9 @@ setvar("mods","Mods");
 	setvar("bravia_sub","Bravia enigne");
 
 setvar("storage","Almacenamiento");       
-        setvar("storage_sub","Intercambio de los almacenamientos");
+        setvar("storage_sub","Exchange of the storage");
 	setvar("normal_sto","Original");
-        setvar("change_sto","Activar el intercambio de alamacenamientos");
+        setvar("change_sto","changes storages (SD-Internal)");
 
 		
 setvar("systemapps_sub","Choose one of the following system apps");
@@ -258,7 +258,7 @@ setvar("socialnetworking","Sozial Networking");
 	setvar("additionalapps","Additional Apps");
 	setvar("adaway_sub","Adaway allows you to block ads via hosts-file");
         setvar("titanium_sub","backup and restore of apps");
-        setvar("mx_sub","Mx video app + codecs armv7");
+        setvar("mobo_sub","Mobo video app + codecs armv7");
         setvar("gapps_sub","Extra gapps (Genie widget,Car home, google translate, g++, street");
 		
 setvar("bootup","Bootanimation");
@@ -274,17 +274,17 @@ setvar("bootsound_sub","Enable or disable the bootsound");
         setvar("bootsoundoff","Disables the bootsound");
 
 setvar("tweak","Especificacion del rendimiento");
-        setvar("tweak_sub","Selecciona el tipo de tweaks deseas instalar");
-        setvar("mode_save","Minimizacion del consumo de bateria");
-        setvar("mode_balanced","Equilibrio entre consumo y rendimiento");
-        setvar("mode_performarce","Ajuste para un buen rendimiento");
+        setvar("tweak_sub","Select tweaks");
+        setvar("mode_save","Tweaks for minimal power");
+        setvar("mode_balanced","Balanced performace");
+        setvar("mode_performarce","Best performace at 1000 Mhz");
        
   
         setvar("kernel_sub","Choose one of the following Kernels");
   	setvar("stock_sub","Slightly modded Stock Kernel with init.d and bootanimation support");
         setvar("stablev5_sub","vurrutKER v5 300/1200 with low values of voltage.(the most stable)");
         setvar("stable_sub","vurruKER v7 120/1350 estable");
-        setvar("exp_sub","Ultimo vurrutKER. experimental(versiones RC)");
+        setvar("exp_sub","Last vurrutKER. experimental(Last Versions)");
     
     setvar("vinstall","Ready for installation");
     setvar("vinstall_sub","All informations were collected. Now vurrutROM can be installed.\n\n"+
@@ -426,7 +426,6 @@ menubox(
   	"icons/install",
   	"type.prop",
  	getvar("typical"),getvar("typical_sub"),"icons/default",
-  	getvar("custom"), getvar("custom_sub"), "icons/customize",
   	getvar("lite"),getvar("lite_sub"),"icons/customize"
 );
 
@@ -467,7 +466,9 @@ selectbox(
                 
                 "joooded",getvar("jooode_sub"),0,
 
-                "light",getvar("light_sub"),0
+                "light",getvar("light_sub"),0,
+
+                "MIUI",getvar("miui_sub"),0
 		
 );
 endif;
@@ -615,7 +616,7 @@ getvar("additionalapps"),"",2,
 	"Adaway",getvar("adaway_sub"),0,
         "Titanium",getvar("titanium_sub"),0,
         "Cpu control",getvar("cpu_sub"),0,
-        "Mx video+codecs",getvar("mx_sub"),0,
+        "Mobo video+codecs",getvar("mobo_sub"),0,
         "Extra gaaps",getvar("gapps_sub"),0
 );
 endif;
@@ -783,9 +784,9 @@ selectbox(
 
 );
 endif;
-######################################
+#########################################
 #####################Storage#############
-######################################
+#########################################
 
 if
     file_getprop("/tmp/aroma-data/type.prop","selected") == "2"

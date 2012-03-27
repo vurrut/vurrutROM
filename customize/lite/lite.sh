@@ -2,10 +2,8 @@
 rm /system/app/DeskClock.apk
 rm /system/app/FactoryTest.apk
 rm /system/app/install_flash_player.apk
-rm /system/app/lcdtest.apk
 rm /system/app/LiveWallpapers.apk
 rm /system/app/LiveWallpapersPicker.apk
-rm /system/app/MtpApplication.apk
 rm /system/app/MusicPlayer.apk
 rm /system/app/PicoTts.apk
 rm /system/app/RoseEUKor.apk
@@ -13,12 +11,13 @@ rm /system/app/serviceModeApp.apk
 rm /system/app/Street.apk
 rm /system/app/TouchWizCalculator.apk
 rm /system/app/TouchWizCalendar.apk
+rm /system/app/Calculator.apk
+rm /system/app/Calendar.apk
 rm /system/app/TtsService.apk
 rm /system/app/TwWallpaperChooser.apk
 rm /system/app/UserDictionaryProvider.apk
 rm /system/app/VoiceDialer.apk
 rm /system/app/VoiceRecorder.apk
-rm /system/app/WlanTest.apk
 ## apps samsung
 rm  /system/app/BuddiesNow.apk
 rm  /system/app/aldiko-standard-1.2.6.1-samsung-s1.apk
