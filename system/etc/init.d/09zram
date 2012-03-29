@@ -1,0 +1,12 @@
+#!/system/bin/sh
+#Zram 
+
+
+#insmod /system/modules/zram.ko num_devices=1
+#echo $((96*1024*1024)) > /sys/block/zram0/disksize
+#mknod /dev/zram0 b 253 0
+#mkswap /dev/zram0
+#swapon /dev/zram0
+
+
+#not yet

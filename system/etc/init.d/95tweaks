@@ -4,7 +4,7 @@
 # and fixed errors: "One script to roll them all" - v1.2 (c)2012 Slaid480
 #
 # This script has been tested on the GT-I9003 only 
-#Mod by vurrut
+#Mod by vurrut  
 
 #sd
 
@@ -21,38 +21,6 @@ MMC=`ls -d /sys/block/mmc*`;
 STL=`ls -d /sys/block/stl*`;
 BML=`ls -d /sys/block/bml*`;
 
-# bootloop recovery inspired by iandol. Thanks.
-if [ -e /data/lagfree_recovery ]; then
-   if [ -s /data/lagfree_recovery ]; then
-      $L "
-      sync
-      sleep 5
-      exit
-   fi;
-else
-   touch /data/lagfree_recovery
-   $L "LagFree recovery file created..."
-fi;
-
-# redirecting all output to "/data/S99_LagFree.log" if debug flag file exists
-if [ -e /data/lagfree_debug ]; then
-     rm -f /data/lagfree_debug.log
-     LOG=/data/lagfree_debug.log
-     echo "Script starting @ `date`" >> $LOG
-     echo "Build: `getprop ro.build.version.release`" >> $LOG
-     echo "Mod: `getprop ro.modversion`" >> $LOG
-     echo "Kernel: `uname -r`" >> $LOG
-     exec >> $LOG 2>&1
-     set -x
-fi;
-
-# remount noatime
-$L "Remounting file system for tweaks..."
-sync
-mount -o remount,rw,noatime,nodiratime,norelatime,barrier=0,noauto_da_alloc,nobh -t rootfs /
-mount -o remount,rw,noatime,nodiratime,norelatime,noauto_da_alloc,barrier=0,nobh /dev/block/stl12 /system
-mount -o remount,rw,noatime,nodiratime,norelatime,noauto_da_alloc,barrier=0,nobh /dev/block/stl13 /data
-mount -o remount,rw,noatime,nodiratime,norelatime,noauto_da_alloc,barrier=0,nobh /dev/block/stl14 /cache
 
 # set caches to 4mb
 $L "Applying cache tweaks..."
@@ -61,47 +29,6 @@ for i in $BDI; do
 	echo 4096 > $i/read_ahead_kb;
     fi;
 done;
-
-# set scheduler to NOOP
-$L "Applying scheduler tweaks..."
-for a in $LOOP $MMC $STL $BML $RAM; do
-    if [ -e $a/queue/read_ahead_kb ]; then
-	echo 4096 > $a/queue/read_ahead_kb;
-    fi;
-    if [ -e $a/queue/rotational ]; then
-	echo 0 > $a/queue/rotational;
-    fi;
-    if [ -e $a/queue/nr_requests ]; then
-	echo 8192 > $a/queue/nr_requests;
-    fi;
-    if [ -e $a/queue/iosched/low_latency ]; then
-	echo 1 > $a/queue/iosched/low_latency;
-    fi;
-    if [ -e $a/queue/iosched/back_seek_penalty ]; then
-	echo 1 > $a/queue/iosched/back_seek_penalty;
-    fi;
-    if [ -e $a/queue/iosched/back_seek_max ]; then
-	echo 1000000000 > $a/queue/iosched/back_seek_max;
-    fi;
-    if [ -e $a/queue/iosched/slice_idle ]; then
-	echo 0 > $a/queue/iosched/slice_idle;
-    fi;
-    if [ -e $a/queue/iosched/quantum ]; then
-	echo 8 > $a/queue/iosched/quantum;
-    fi;
-    if [ -e $a/queue/iosched/fifo_batch ]; then
-	echo 1 > $a/queue/iosched/fifo_batch;
-    fi;
-    if [ -e $a/queue/iosched/writes_starved ]; then
-        echo 1 > $a/queue/iosched/writes_starved;
-    fi;
-    if [ -e $a/queue/iosched/rev_penalty ]; then
-        echo 1 > $a/queue/iosched/rev_penalty;
-    fi;
-    if [ -e $a/queue/rq_affinity ]; then
-        echo 1 > $a/queue/rq_affinity;
-    fi;
-    if [ -e $a/queue/iostats 
 
 # set memory tweaks (minfree)
 $L "Applying memory tweaks..."
