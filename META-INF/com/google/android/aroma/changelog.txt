@@ -1,7 +1,6 @@
 5.0.0 Beta 4
 -Fix little bugs.
 -Add zeam launcher.
--Add xperia S launcher
 -Initial define light and lite type install
 
 

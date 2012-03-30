@@ -161,7 +161,7 @@ setvar("storage_sub","Intercambio de los almacenamientos");
 setvar("kernel_sub","Elija uno de los siguientes kernels");
   	setvar("kernel_sub","De valores ligeramente modificada del núcleo y soporte de arranque de animación init.d");
         setvar("stablev5_sub","vurrutKER v5 300/1200 con valores bajos de voltaje.(el mas estable)");
-        setvar("stable_sub","vurruKER v7 120/1350 estable");
+        setvar("stable_sub","vurruKER v8 120/1350 estable");
         setvar("exp_sub","Ultimo vurrutKER. experimental(versiones RC)");
     
 setvar("vinstall","Preparado para la instalacion");
@@ -287,7 +287,7 @@ setvar("tweak","Especificacion del rendimiento");
         setvar("kernel_sub","Choose one of the following Kernels");
   	setvar("stock_sub","Slightly modded Stock Kernel with init.d and bootanimation support");
         setvar("stablev5_sub","vurrutKER v5 300/1200 with low values of voltage.(the most stable)");
-        setvar("stable_sub","vurruKER v7 120/1350 estable");
+        setvar("stable_sub","vurruKER v8 120/1350 estable");
         setvar("exp_sub","Last vurrutKER. experimental(Last Versions)");
     
     setvar("vinstall","Ready for installation");
