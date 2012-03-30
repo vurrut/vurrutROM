@@ -122,15 +122,9 @@ then
 	ui_print(" launcher PRO installed");
 endif;
 
-if
-   	file_getprop("/tmp/aroma-data/systemmods.prop","selected.1") == "6"
-then	
-	package_extract_dir("customize/launcher/xperias","/");
-	ui_print(" Xperia S Launcher installed");
-endif;
 
 if
-   	file_getprop("/tmp/aroma-data/systemmods.prop","selected.1") == "7"
+   	file_getprop("/tmp/aroma-data/systemmods.prop","selected.1") == "6"
 then	
 	package_extract_dir("customize/launcher/zeam","/");
 	ui_print(" Zeam Launcher installed");

@@ -462,10 +462,8 @@ selectbox(
                  "AOSP Launcher",getvar("aosp_sub"),0,
 
                  "Launcher PRO",getvar("launcherPRO_sub"),0,
-
-                 "Xperias S Launcher",getvar("xperias_sub"),0,
        
-                 "Zeam Launcher",getvar("zeam_sub"),0
+                 "Zeam Launcher",getvar("zeam_sub"),0,
 	
 	"UI Mods","",2,
 	
@@ -487,7 +485,7 @@ if
 then
 	writetmpfile(
 		"systemmods.prop",
-			"selected.1=6\n"+
+			"selected.1=6\n"
 			
 );
 endif;
@@ -495,7 +493,7 @@ endif;
 
 
 ##########################################################################
-#############					MODS						##############
+#############			    MODS	       	##################
 ##########################################################################
 
 if
@@ -655,7 +653,7 @@ then
       		"item.4.2=1\n"+
       		"item.4.3=1\n"+
       		"item.4.4=0\n"+
-      		"item.4.5=0\n"+
+      		"item.4.5=0\n"
 		
 );
 endif;
@@ -687,7 +685,7 @@ then
       		"item.4.2=0\n"+
       		"item.4.3=0\n"+
       		"item.4.4=0\n"+
-      		"item.4.5=0\n"+		
+      		"item.4.5=0\n"		
 );
 endif;
 
@@ -903,21 +901,30 @@ selectbox(
       
     "stablev5_uv",getvar("stablev5_sub"),0,
       
-    "stable",getvar("stable_sub"),0,
+    "stable v8",getvar("stable_sub"),0,
 	
-    "experimental",getvar("exp_sub"),0
+    "experimental(empty)",getvar("exp_sub"),0
 		
 );
 endif;
 
 if
-    file_getprop("/tmp/aroma-data/type.prop","selected") == "1" || file_getprop("/tmp/aroma-data/type.prop","selected") == "3"
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
 then
 	writetmpfile(
     	"kernels.prop",
-      		"selected.1=3\n"+	
+      		"selected.1=2\n"		
 );
 endif;
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "3"
+then
+	writetmpfile(
+    	"kernels.prop",
+      		"selected.1=2\n"		
+);
+endif;
+
 #############################################
 ########### InstallationViewBox	#############
 #############################################
