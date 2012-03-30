@@ -58,11 +58,11 @@ then
 	setvar("themetitel_sub","Este tema solo se utiliza para la instalacion");
 	
 	setvar("welcome","Bienvenido a la instalación");
-  	setvar("info","Usted esta a punto de instalar vurrutROM para el Galaxy SLC.\n\n"+
+  	setvar("info","Usted esta a punto de instalar vurrutROM para el Galaxy SCL.\n\n"+
     "  NAME : <#080>vurrutROM</#>\n"+
-    "  VERSION : <#080>v5_beta3</#>\n"+
+    "  VERSION : <#080>v5_beta4</#>\n"+
     "  DEV : <#080>vurrut</#>\n"+
-    "  DATUM : <#080>29.03.2012</#>\n\n\n\n"+
+    "  DATUM : <#080>30.03.2012</#>\n\n\n\n"+
     "----");
     
 setvar("romoptions","Opciones");
@@ -85,8 +85,10 @@ setvar("systemmods_sub","Elija uno de los mods siguientes para instalar");
   	setvar("tw4launcher_sub","TouchWiz 4.5 Launcher");
   	setvar("tw3launcher_sub","TouchWiz 3 Launcher ");
         setvar("launcherPRO_sub"," LauncherPRO ");
+        setvar("zeam_sub"," Zeam Launcher  ");
 	setvar("golauncher_sub"," Go Launcher EX ");
         setvar("aosp_sub","Aosp gingerbread Launcher ");
+         setvar("xperias_sub","Xperia S launcher+ apps ");
 	setvar("jooode_sub","Fantasico tema de jooode para la vurrutROM");
 	setvar("ics_sub","Tema que imita el interface de ics.realizado por tourangg");
 	setvar("nosystemmod","Tema que viene de fabrica");
@@ -182,11 +184,11 @@ else
 	setvar("themetitel_sub","This theme will only be used for the installation");
 	
 	setvar("welcome","Welcome to the Installation");
-  	setvar("info","You will now install vurrutROM for the Galaxy SLC\n\n"+
+  	setvar("info","You will now install vurrutROM for the Galaxy SCL\n\n"+
     "  NAME : <#080>vurrutROM</#>\n"+
-    "  VERSION : <#080>v5-beta3</#>\n"+
+    "  VERSION : <#080>v5-beta4</#>\n"+
     "  DEV : <#080>vurrut</#>\n"+
-    "  DATE : <#080>03/29/2012</#>\n\n\n\n"+
+    "  DATE : <#080>03/30/2012</#>\n\n\n\n"+
     "Please press Next to continue the installation");
     
     setvar("romoptions","Options");
@@ -210,7 +212,9 @@ else
   	setvar("tw3launcher_sub","TouchWiz 3 Launcher from Samsung");
         setvar("aosp_sub","Aosp gingerbread Launcher ");
         setvar("launcherPRO_sub"," LauncherPRO ");
+        setvar("zeam_sub"," Zeam Launcher  ");
 	setvar("golauncher_sub"," Go Launcher EX ");
+        setvar("xperias_sub","Xperia S launcher + apps ");
 	setvar("nosystemmod","Tema que viene de fabrica");
 	setvar("nosystemmod_sub","Enabled cambia la interfaz de usuario por defecto ");
 	setvar("ics_sub","Theme imitating the interface of ics. by tourangg");
@@ -361,7 +365,7 @@ endif;
 ini_set("rom_name",             "vurrutROM");
 ini_set("rom_version",          "5");
 ini_set("rom_author",           "vurrut");
-ini_set("rom_device",           "Samsung Galaxy SLC");
+ini_set("rom_device",           "Samsung Galaxy SCL");
 
 ##
 # Show Splash for 4 seconds ( 1000 = 1 sec )
@@ -458,6 +462,10 @@ selectbox(
                  "AOSP Launcher",getvar("aosp_sub"),0,
 
                  "Launcher PRO",getvar("launcherPRO_sub"),0,
+
+                 "Xperias S Launcher",getvar("xperias_sub"),0,
+       
+                 "Zeam Launcher",getvar("zeam_sub"),0
 	
 	"UI Mods","",2,
 	
@@ -479,9 +487,8 @@ if
 then
 	writetmpfile(
 		"systemmods.prop",
-			"selected.1=2\n"+
-			"selected.2=3\n"+
-			"selected.3=1\n"
+			"selected.1=6\n"+
+			
 );
 endif;
 
@@ -622,28 +629,33 @@ getvar("additionalapps"),"",2,
 );
 endif;
 
-###################
+##################################
 ########Standard version(light)###
-###################
+##################################
 if
     file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
 then
 #Default.prop 
 	writetmpfile(
     	"customize.prop",
-      		"item.1.1=1\n"+
-      		"item.1.2=1\n"+
-      		"item.1.3=1\n"+
-			"item.1.4=1\n"+
+      		"item.1.1=0\n"+
+      		"item.1.2=0\n"+
+      		"item.1.3=0\n"+
+			"item.1.4=0\n"+
       		
       		"item.2.1=0\n"+
-      		"item.2.2=1\n"+
-                "item.2.3=1\n"+
+      		"item.2.2=0\n"+
+                "item.2.3=0\n"+
 
-			"item.3.1=1\n"+
-      		"item.3.2=1\n"+
+			"item.3.1=0\n"+
+      		"item.3.2=0\n"+
+                 
       		
-      		"item.4.1=0\n"
+      		"item.4.1=0\n"+
+      		"item.4.2=1\n"+
+      		"item.4.3=1\n"+
+      		"item.4.4=0\n"+
+      		"item.4.5=0\n"+
 		
 );
 endif;
@@ -665,12 +677,17 @@ then
       		
       		"item.2.1=0\n"+
       		"item.2.2=0\n"+
+                "item.2.3=0\n"+
 
 			"item.3.1=0\n"+
       		"item.3.2=0\n"+
+                 
       		
-      		"item.4.1=0\n"
-		
+      		"item.4.1=0\n"+
+      		"item.4.2=0\n"+
+      		"item.4.3=0\n"+
+      		"item.4.4=0\n"+
+      		"item.4.5=0\n"+		
 );
 endif;
 
@@ -705,9 +722,9 @@ selectbox(
 );
 endif;
 
-######################
-#######Standard ######
-######################
+#############################
+#######Standard (light)######
+#############################
 
 if
     file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
@@ -811,9 +828,9 @@ selectbox(
 );
 endif;
 
-######################
-#######Standard ######
-######################
+##############################
+#######Standard (light) ######
+##############################
 
 if
     file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
@@ -823,7 +840,23 @@ then
       		"selected.1=1\n"		
 );
 endif;
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
+then
+	writetmpfile(
+    	"tweak.prop",
+      		"selected.1=2\n"		
+);
+endif;
 
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "1"
+then
+	writetmpfile(
+    	"storage.prop",
+      		"selected.1=2\n"		
+);
+endif;
 ###################
 ########Lite ######
 ###################
@@ -836,7 +869,22 @@ then
       		"selected.1=2\n"		
 );
 endif;
-
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "3"
+then
+	writetmpfile(
+    	"tweak.prop",
+      		"selected.1=1\n"		
+);
+endif;
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "3"
+then
+	writetmpfile(
+    	"storage.prop",
+      		"selected.1=2\n"		
+);
+endif;
 
 #############################################
 ########### 	Kernel	#####################
@@ -862,7 +910,14 @@ selectbox(
 );
 endif;
 
-
+if
+    file_getprop("/tmp/aroma-data/type.prop","selected") == "1" || file_getprop("/tmp/aroma-data/type.prop","selected") == "3"
+then
+	writetmpfile(
+    	"kernels.prop",
+      		"selected.1=3\n"+	
+);
+endif;
 #############################################
 ########### InstallationViewBox	#############
 #############################################

@@ -1,3 +1,10 @@
+5.0.0 Beta 4
+-Fix little bugs.
+-Add zeam launcher.
+-Add xperia S launcher
+-Initial define light and lite type install
+
+
 5.0.0 Beta 3
 -Fix little bugs.
 -Add MIUI theme by tourang.
