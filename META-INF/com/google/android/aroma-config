@@ -57,12 +57,12 @@ then
 	setvar("themetitel","Elegir un tema");
 	setvar("themetitel_sub","Este tema solo se utiliza para la instalacion");
 	
-	setvar("welcome","Bienvenido a la instalación");
+	setvar("welcome","Bienvenido a la instalacion");
   	setvar("info","Usted esta a punto de instalar vurrutROM para el Galaxy SCL.\n\n"+
     "  NAME : <#080>vurrutROM</#>\n"+
-    "  VERSION : <#080>v5_beta4</#>\n"+
+    "  VERSION : <#080>v5</#>\n"+
     "  DEV : <#080>vurrut</#>\n"+
-    "  DATUM : <#080>30.03.2012</#>\n\n\n\n"+
+    "  DATUM : <#080>07.04.2012</#>\n\n\n\n"+
     "----");
     
 setvar("romoptions","Opciones");
@@ -186,9 +186,9 @@ else
 	setvar("welcome","Welcome to the Installation");
   	setvar("info","You will now install vurrutROM for the Galaxy SCL\n\n"+
     "  NAME : <#080>vurrutROM</#>\n"+
-    "  VERSION : <#080>v5-beta4</#>\n"+
+    "  VERSION : <#080>v5</#>\n"+
     "  DEV : <#080>vurrut</#>\n"+
-    "  DATE : <#080>03/30/2012</#>\n\n\n\n"+
+    "  DATE : <#080>04/7/2012</#>\n\n\n\n"+
     "Please press Next to continue the installation");
     
     setvar("romoptions","Options");

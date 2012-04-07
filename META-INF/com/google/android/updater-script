@@ -212,7 +212,7 @@ endif;
 if
 	file_getprop("/tmp/aroma-data/kernels.prop","selected.1") == "2"
 then
-	ui_print("	Installing vurrutKER v7 stable");
+	ui_print("	Installing vurrutKER v8 stable");
 	assert(package_extract_file("customize/boot/stable/boot.img", "/tmp/boot.img"),
        write_raw_image("/tmp/boot.img", "boot"),
        delete("/tmp/boot.img"));
