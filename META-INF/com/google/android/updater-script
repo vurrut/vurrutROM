@@ -119,7 +119,7 @@ if
    	file_getprop("/tmp/aroma-data/systemmods.prop","selected.1") == "5"
 then	
 	package_extract_dir("customize/launcher/pro","/");
-	ui_print(" launcher PRO installed");
+	ui_print("      launcher PRO installed");
 endif;
 
 
@@ -127,7 +127,7 @@ if
    	file_getprop("/tmp/aroma-data/systemmods.prop","selected.1") == "6"
 then	
 	package_extract_dir("customize/launcher/zeam","/");
-	ui_print(" Zeam Launcher installed");
+	ui_print("      Zeam Launcher installed");
 endif;
 
 
